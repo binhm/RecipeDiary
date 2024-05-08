@@ -15,11 +15,14 @@
     - Install Expo ```npm i -g expo-cli```
 
     1. To run the application
-        ```npx expo start```
+        ```shell
+        npx expo start```
     2. If using ios, open ios simulator
-        ```open -a Simulator```
+        ```shell
+        open -a Simulator```
 
 ## Troubleshooting
 
     - When installing Xcode, expo doesn't recognize that installment is complete, use this
-    ```sudo xcode-select -s /Applications/Xcode.app/Contents/Developer```
+    ```shell
+    sudo xcode-select -s /Applications/Xcode.app/Contents/Developer```
