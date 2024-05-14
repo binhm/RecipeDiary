@@ -1,12 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './App/Navigation/Screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import NavBar from './App/Navigation/NavBar';
 
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <Text>What are you making today?</Text> */}
-      <HomeScreen/>
+      <NavigationContainer>
+        <NavBar/>
+      </NavigationContainer>
       <StatusBar style="auto" />
     </View>
   );
