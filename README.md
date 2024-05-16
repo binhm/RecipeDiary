@@ -38,10 +38,10 @@
         ```
         npm install @react-navigation/bottom-tabs
         ```
-    4. Install [Swiper Library](https://github.com/leecade/react-native-swiper?tab=readme-ov-file)
+    <!-- 4. Install [Swiper Library](https://github.com/leecade/react-native-swiper?tab=readme-ov-file)
         ```
         npm i react-native-swiper --save
-        ```
+        ``` -->
 
 ## Troubleshooting
 
@@ -49,3 +49,8 @@
     ```
     sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
     ```
+
+## Credits
+
+    - [Swiper] (https://github.com/weahforsage/react-native-animated-pagination-dots)
+    - [Scroll Swipers] (https://stackoverflow.com/questions/70917826/how-to-show-only-one-item-at-a-time-in-react-natives-flatlists)

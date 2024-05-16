@@ -15,7 +15,6 @@ export default function SwipeDots({
     dotSize: dotSize || 12,
     marginHorizontal: 5,
   };
-  console.log("width=", width);
   const inputRange = [-width, 0, width];
   const translateX = scrollX.interpolate({
     inputRange,

@@ -20,12 +20,12 @@ export default function ScreenSwiper() {
   const data = [
     {
       id: 0,
-      swipeText: "Swipe to Search By Recipes >",
+      swipeText: "< Swipe to Search By Recipes ",
       searchText: "Search By Ingredients",
     },
     {
       id: 1,
-      swipeText: "< Swipe to Search Ingredients",
+      swipeText: "Swipe to Search Ingredients >",
       searchText: "Search By Recipes",
     },
   ];
@@ -38,17 +38,15 @@ export default function ScreenSwiper() {
 
   const renderItem = useCallback(
     ({ item }) => (
-      <View style={[styles.card, { width }]}>
+      <View
+        style={[styles.card, { width: 275, marginLeft: 100, marginRight: 15 }]}
+      >
         <Text style={styles.cardItem}>{item.swipeText}</Text>
       </View>
     ),
     []
   );
-  const inputRange = [-width, 0, width];
-  const defaultSetting = {
-    dotSize: 12,
-    marginHorizontal: 3,
-  };
+
   const scrollX = React.useRef(new Animated.Value(0)).current;
 
   return (
@@ -73,7 +71,7 @@ export default function ScreenSwiper() {
           onViewableItemsChanged={onScroll} // Calling with anonymous function here causes issues
           decelerationRate={"normal"}
           viewabilityConfig={{
-            itemVisiblePercentThreshold: 50,
+            itemVisiblePercentThreshold: 90,
           }}
         />
       </View>
@@ -82,7 +80,7 @@ export default function ScreenSwiper() {
       <View style={styles.searchContainer}>
         <Text style={styles.searchText}>
           {" "}
-          {data[currentSectionIndex].searchText}
+          {data.at(currentSectionIndex).searchText}
         </Text>
         <TextInput
           editable
